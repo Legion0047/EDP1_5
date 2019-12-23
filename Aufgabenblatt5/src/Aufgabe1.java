@@ -7,18 +7,52 @@ import java.util.Arrays;
 public class Aufgabe1 {
     
     private static int[][] genFilledArray(int n) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return null; //Zeile kann geändert oder entfernt werden.
+        int[][] array = new int[n][n];
+        for (int i = 0;i<n;i++){
+            for (int j = 0;j<n-i;j++){
+                array[i][j] = i+j+1;
+            }
+        }
+        for (int i = 0;i<n;i++){
+            for (int j = n-i; j<n;j++){
+                array[i][j] = n-j+(n-i-1);
+            }
+        }
+        return array;
     }
     
     private static int[][] extendArray(int[][] inputArray) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return null; //Zeile kann geändert oder entfernt werden.
+        int length = 0;
+        for (int i = 0; i<inputArray.length;i++){
+            if (inputArray[i].length>length){
+                length=inputArray[i].length;
+            }
+        }
+
+        int[][] returnArray = new int[inputArray.length][length];
+
+        for (int i = 0;i<returnArray.length;i++){
+            int oldLength = inputArray[i].length;
+            for (int j = 0;j<length-oldLength;j++){
+                returnArray[i][j] = 0;
+            }
+            for (int j = length-oldLength;j<length;j++){
+                returnArray[i][j]=inputArray[i][j-(length-oldLength)];
+            }
+        }
+        return returnArray;
     }
     
     private static int[] reformatArray(int[][] inputArray) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return null; //Zeile kann geändert oder entfernt werden.
+        int[] returnArray = new int[inputArray.length];
+        for (int i = 0; i<returnArray.length;i++){
+            int number = 0;
+            for (int j=0;j<inputArray[i].length;j++){
+                number = (int) (number+inputArray[i][j]* Math.pow(2,inputArray[i].length-j-1));
+            }
+            returnArray[i]=number;
+        }
+        return returnArray;
     }
     
     private static void printArray(int[][] inputArray) {
@@ -46,7 +80,7 @@ public class Aufgabe1 {
         printArray(array);
         assert (Arrays.deepEquals(array, new int[][]{{1, 2}, {2, 1}}));
         System.out.println();
-        
+
         array = genFilledArray(4);
         printArray(array);
         assert (Arrays.deepEquals(array, new int[][]{{1, 2, 3, 4}, {2, 3, 4, 3}, {3, 4, 3, 2}, {4, 3, 2, 1}}));
@@ -55,7 +89,7 @@ public class Aufgabe1 {
         array = genFilledArray(7);
         printArray(array);
         System.out.println();
-        
+
         int[][] array2 = new int[][]{{1, 1, 0}, {1}, {1, 0}, {1, 0, 0, 1}};
         int[][] array2new1 = extendArray(array2);
         printArray(array2new1);
@@ -72,7 +106,7 @@ public class Aufgabe1 {
         int[][] array2new3 = extendArray(array2);
         printArray(array2new3);
         System.out.println();
-        
+
         int[][] array3 = array2new1.clone();
         int[] array3new = reformatArray(array3);
         printArray(array3new);

@@ -2,16 +2,42 @@
     Aufgabe 4) Rekursion und Zeichnen mit StdDraw
 */
 
+import java.awt.*;
 import java.util.Random;
 
 public class Aufgabe4 {
     
     private static void waterFlow(int[][] map, int row, int col, int prevValue) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Angabe
+        int currentValue = map[row][col];
+        if (currentValue<=prevValue){
+            map[row][col]=-1;
+            if (row-1!=-1){
+                if(map[row-1][col]!=-1)waterFlow(map,row-1,col,currentValue);
+            }
+            if (row+1!=map.length){
+                if (map[row+1][col]!=-1) waterFlow(map,row+1,col,currentValue);
+            }
+            if (col-1!=-1) {
+                if (map[row][col-1]!=-1) waterFlow(map, row, col - 1, currentValue);
+            }
+            if (col+1!=map[0].length) {
+                if (map[row][col+1]!=-1) waterFlow(map, row, col + 1, currentValue);
+            }
+        }
     }
     
     private static void drawMap(int[][] map) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Angabe
+        double size = 450/map.length;
+        for (int i = 0; i<map.length;i++){
+            for (int j = 0; j<map.length;j++) {
+                if (map[i][j]==-1){
+                    StdDraw.setPenColor(Color.BLUE);
+                } else {
+                    StdDraw.setPenColor(Color.GREEN);
+                }
+                StdDraw.filledSquare(size/2+(i*size),size/2+(j*size),size/2);
+            }
+        }
     }
     
     private static void printArray(int[][] inputArray) {
@@ -44,7 +70,14 @@ public class Aufgabe4 {
     }
     
     public static void main(String[] args) {
-        
+        int width = 450;
+        int height = 450;
+        StdDraw.setCanvasSize(width, height);
+        StdDraw.setXscale(0, 450);
+        StdDraw.setYscale(0, 450);
+        StdDraw.enableDoubleBuffering();
+        StdDraw.setPenRadius(0.0025);
+
         int[][] map = {{9, 5, 2, 9, 6, 11, 7, 8, 9},
                 {9, 6, 3, 4, 6, 11, 1, 1, 7},
                 {6, 9, 8, 5, 10, 11, 1, 1, 6},
@@ -61,9 +94,10 @@ public class Aufgabe4 {
         System.out.println();
         printArray(map);
         drawMap(map);
-        
+        StdDraw.show();
         StdDraw.pause(5000);
-        
+        StdDraw.clear();
+
         int size = 15;
         map = genMap(size);
         map[size / 2][size / 2] = size * 10;
@@ -73,6 +107,8 @@ public class Aufgabe4 {
         System.out.println();
         printArray(map);
         drawMap(map);
+        StdDraw.show();
+
     }
 }
 

@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Aufgabenblatt2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aufgabenblatt2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aufgabenblatt2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angabe/Aufgabenblatt3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/angabe/Aufgabenblatt3.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Aufgabe1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Aufgabe2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aufgabe3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Aufgabe4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgabe4.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,13 +22,19 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1U6dPYWuucGYfAv8mcF9E6UBuR5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543528300998" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -39,19 +43,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Aufgabe1">
+  <component name="RunManager" selected="Application.Aufgabe4">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -130,11 +122,23 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Aufgabe4" />
-        <item itemvalue="Application.Aufgabe2" />
         <item itemvalue="Application.Aufgabe3" />
+        <item itemvalue="Application.Aufgabe2" />
         <item itemvalue="Application.Aufgabe1" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -163,6 +167,52 @@
     </ignored-roots>
     <MESSAGE value="A1 geändert" />
     <option name="LAST_COMMIT_MESSAGE" value="A1 geändert" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1577024154702">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577024154702" />
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1577027899542">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577027899542" />
+    <state width="1807" height="285" key="GridCell.Tab.0.bottom" timestamp="1577037496309">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="285" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577037496309" />
+    <state width="1807" height="285" key="GridCell.Tab.0.center" timestamp="1577037496309">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="285" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577037496309" />
+    <state width="1807" height="285" key="GridCell.Tab.0.left" timestamp="1577037496309">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="285" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577037496309" />
+    <state width="1807" height="285" key="GridCell.Tab.0.right" timestamp="1577037496309">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="285" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577037496309" />
+    <state width="1807" height="352" key="GridCell.Tab.1.bottom" timestamp="1577032102519">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577032102519" />
+    <state width="1807" height="352" key="GridCell.Tab.1.center" timestamp="1577032102519">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577032102519" />
+    <state width="1807" height="352" key="GridCell.Tab.1.left" timestamp="1577032102518">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577032102518" />
+    <state width="1807" height="352" key="GridCell.Tab.1.right" timestamp="1577032102519">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577032102519" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1577027503885">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1577027503885" />
   </component>
   <component name="masterDetails">
     <states>

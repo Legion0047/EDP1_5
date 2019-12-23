@@ -10,8 +10,15 @@ public class Aufgabe2 {
     private static final int subSize = 3; //sudoku subfield size ==> 3x3
     
     private static int[][] readArrayFromFile(String filename) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return null; //Zeile kann geändert oder entfernt werden.
+        int[][] returnArray = new int[sSize][sSize];
+        In fileReader = new In(filename);
+        for (int i =0;i<returnArray.length;i++){
+            String[] line = fileReader.readLine().split(";");
+            for (int j = 0; j<line.length;j++){
+                returnArray[i][j] = Integer.parseInt(line[j]);
+            }
+        }
+        return returnArray;
     }
     
     private static boolean solveSudoku(int[][] array, int idx) {
@@ -37,23 +44,45 @@ public class Aufgabe2 {
     }
     
     private static boolean isNumUsedInBox(int[][] array, int num, int row, int col) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return false; //Zeile kann geändert oder entfernt werden.
+        boolean found = false;
+        for (int i = row; i < row + subSize; i++) {
+            for (int j = col; i < col + subSize; i++) {
+                if (array[i][j] == num) found = true;
+            }
+        }
+        return found;
     }
     
     private static boolean isNumUsedInRow(int[][] array, int num, int row) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return false; //Zeile kann geändert oder entfernt werden.
+        boolean found = false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[row][i] == num) found = true;
+        }
+        return found;
     }
     
     private static boolean isNumUsedInCol(int[][] array, int num, int col) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return false; //Zeile kann geändert oder entfernt werden.
+        boolean found = false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i][col] == num) found = true;
+        }
+        return found;
     }
     
     private static boolean isValidSudokuSolution(int[][] array) {
-        // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        return false; //Zeile kann geändert oder entfernt werden.
+        boolean error = false;
+        for (int i = 0; i<array.length;i++){
+            for (int j = 0; j<array.length;j++){
+                for (int l = 1;l<=9;l++){
+                    error = isNumUsedInCol(array,l,j);
+                    error = isNumUsedInRow(array,l,i);
+                    if ((i+1)%subSize==0&&(j+1)%subSize==0&&(i+1)!=sSize&&(j+1)!=sSize){
+                        error=isNumUsedInBox(array,l,i,j);
+                    }
+                }
+            }
+        }
+        return error;
     }
     
     private static void printArray(int[][] inputArray) {
